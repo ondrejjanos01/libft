@@ -14,15 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*str;
 
 	i = 0;
 	j = ft_strlen(s);
 	str = (char *)malloc(sizeof(*str) * (j + 1));
 	if (s == NULL)
-        return NULL;
+		return (NULL);
 	while (i < j)
 	{
 		str[i] = s[i];

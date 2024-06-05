@@ -62,10 +62,10 @@ int	main(void)
 	printf("Test 5: '%s' -> %d\n", test5, ft_atoi(test5));
 	printf("Test 6: '%s' -> %d\n", test6, ft_atoi(test6));
 	printf("Test 7: '%s' -> %d\n", test7, ft_atoi(test7));
-	printf("Test 8: '%s' -> %d\n", test8, ft_atoi(test8));  // Should handle multiple '+' or '-' signs
-	printf("Test 9: '%s' -> %d\n", test9, ft_atoi(test9));  // Should handle multiple '+' or '-' signs
-	printf("Test 10: '%s' -> %d\n", test10, ft_atoi(test10));  // Should handle multiple '+' or '-' signs
-	printf("Test 11: '%s' -> %d\n", test11, ft_atoi(test11));  // Should handle multiple '+' or '-' signs
+	printf("Test 8: '%s' -> %d\n", test8, ft_atoi(test8));  
+	printf("Test 9: '%s' -> %d\n", test9, ft_atoi(test9));  
+	printf("Test 10: '%s' -> %d\n", test10, ft_atoi(test10)); 
+	printf("Test 11: '%s' -> %d\n", test11, ft_atoi(test11));  
 
 	return 0;
 }*/

@@ -38,11 +38,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
     result = ft_memchr(str, search_char, n);
     if (result != NULL)
     {
-        printf("Character '%c' found at position: %ld\n", search_char, (char *)result - str);
+	printf("Character '%c' found at: %ld\n",search_char, (char *)result - str);
     }
     else
     {
-        printf("Character '%c' not found in the string.\n", search_char);
+	printf("Character '%c' not found in the string.\n", search_char);
     }
 
     return 0;
