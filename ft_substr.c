@@ -12,27 +12,39 @@
 
 #include "libft.h"
 
+static char	*allocate_empty_string(void)
+{
+	char	*str;
+
+	str = (char *)malloc(1);
+	if (str)
+		str[0] = '\0';
+	return (str);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	str_len;
 	char	*str;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (str == 0)
+	if (!s)
+		return (NULL);
+	str_len = ft_strlen(s);
+	if (start >= str_len)
+		return (allocate_empty_string());
+	if (len > str_len - start)
+		len = str_len - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < len && s[start + i])
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str[i] = s[start + i];
 		i++;
 	}
-	str[j] = 0;
+	str[i] = '\0';
 	return (str);
 }
 
